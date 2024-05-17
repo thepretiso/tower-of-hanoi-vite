@@ -10,7 +10,7 @@ export const TRANSLATIONS = {
     highestScore: 'Your higest score was {moves} moves and it took you {time} to complete.',
     increase: '+',
     info: 'About',
-    infoMessage: 'Welcome to the Tower of Hanoi game! Your mission is to move all the discs from the left rod to the right rod with use of temporary middle rod. Only top discs can be moved and you can only put smaller disc on larger disc. You can use auto solve feature if you are not sure, but your score will not count. Controls are keyboard or mouse, ARROWS for navigating, ENTER/CLICK for pressing, BACKSPACE for deactivate current move when disc is selected. So are you ready to give it a try? ',
+    infoMessage: 'Welcome to the Tower of Hanoi game! Your mission is to move all the discs from the left rod to the right rod with use of temporary middle rod. Only top discs can be moved and you can only put smaller disc on larger disc. You can use auto solve feature if you are not sure, but your score will not count. ARROWS/MOUSE for navigating, ENTER/CLICK for pressing, BACKSPACE for deactivate current move when disc is selected. So are you ready to give it a try?',
     looseMessage: 'Times up! You loose :( But it\'s fine, you can try it again :)',
     newGame: 'New game',
     moves: 'Moves',
