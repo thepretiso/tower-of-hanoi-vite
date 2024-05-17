@@ -1,0 +1,21 @@
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color: #733a3a;
+}
+
+#root {
+    position: absolute;
+    margin: 0;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+}
+
+#created-by {
+    position: absolute;
+    top: 1050px;
+    font-size: 10px;
+    left: 15px;
+}

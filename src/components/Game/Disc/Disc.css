@@ -1,0 +1,33 @@
+@keyframes disc-float {
+	0% {
+		transform: translatey(0px);
+	}
+	50% {
+		transform: translatey(-10px);
+	}
+	100% {
+		transform: translatey(0px);
+	}
+}
+
+.disc {
+    position: absolute;
+    height: 60px;
+    background-color: #FDE49E;
+    outline: none;
+    transition: all 0.2s ease 0s;
+    border: 5px solid;
+    border-color: #FEB941;
+    border-radius: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.disc:focus, .disc:hover {
+    background-color: #DD761C;
+}
+
+.disc.active {
+    background-color: #DD761C;
+    animation: disc-float 1s ease-in-out infinite;
+}
