@@ -1,5 +1,5 @@
 # Tower of Hanoi
-Another implementation of the classic mathematic problem of the Hanoi tower,
+Another implementation of the classic mathematic problem of the Tower of Hanoi,
 or The problem of Benares Temple or Tower of Brahma or Lucas' Tower and sometimes
 pluralized as Towers, or simply pyramid puzzle.
 
@@ -28,8 +28,9 @@ from child navigation moves into another child navigation if it is not done by t
 sequence.
 
 ## Improvements for the future
+- implement countdown to have more challenging gameplay
 - mouse navigation bug
-- sass integration for styles
+- sass integration, stylelint integration
 - better styles - these are really poor and not responsive
 - better dialog handling
 - do it in the React way
