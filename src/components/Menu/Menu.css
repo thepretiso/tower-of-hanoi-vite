@@ -23,7 +23,7 @@
     position: relative;
     margin-top: 35px;
     font-size: 50px;
-    left: 853px;
+    left: 850px;
 }
 
 .disc-count-title {
@@ -51,13 +51,13 @@
 
 .start-button {
     position: absolute;
-    left: 868px;
+    left: 864px;
     top: 582px;
 }
 
 .about-button {
     position: absolute;
-    left: 903px;
+    left: 898px;
     top: 709px;
 }
 

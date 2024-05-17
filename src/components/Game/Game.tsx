@@ -269,8 +269,9 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
             this.discRefs.length, 'source', 'temporary', 'destination', solverSteps,
         );
         this.autoSolvingInterval = setInterval(() => {
-            if (index === solverSteps.length) {
+            if (index === solverSteps.length - 1) {
                 this.stopAutoSolving();
+                return;
             }
             const step = solverSteps[index];
             const fromRod = this.rodRefs[step.fromRod];
