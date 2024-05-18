@@ -30,7 +30,8 @@ sequence.
 ## Improvements for the future
 - implement countdown to have more challenging gameplay
 - mouse navigation bug
-- sass integration, stylelint integration
-- better styles - these are really poor and not responsive
+- auto solving could continue
+- better styles - these are really poor, quickly made and not responsive
 - better dialog handling
+- sass integration, stylelint integration
 - do it in the React way

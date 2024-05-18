@@ -1,7 +1,7 @@
 export const TRANSLATIONS = {
     autoSolve: 'Auto solve',
     autoSolveErrorMessage: 'You can auto solve only when all discs are on the source rod.',
-    autoSolveFirstTryMessage: 'When you press auto solve button, the game will start moving discs by itself. If you want to stop the process, press the button again. Auto solve is working only from complete start, it can\'t continue. Also, if you press auto solve, your score will not count. So, looks like it\'s my turn now, but the last step is on you :)',
+    autoSolveFirstTryMessage: 'When you press auto solve button, the game will start moving discs by itself. If you want to stop the process, press the button again. Auto solve is working only from complete start, it can\'t continue. Also, if you press auto solve, your score will not count. Looks like it\'s my turn now, but the last step is on you.',
     autoSolveWin: 'You completed the tower, but it was not your job, confess!',
     back: 'Back',
     decrease: '-',

@@ -11,7 +11,6 @@ import { Props } from './interface';
 import './Menu.css';
 
 export class Menu extends React.PureComponent<Props> implements IFocusable {
-
     domRef = createRef<HTMLDivElement>();
 
     startButton = createRef<HTMLDivElement>();
@@ -34,6 +33,7 @@ export class Menu extends React.PureComponent<Props> implements IFocusable {
 
     componentDidMount(): void {
         this.menuNavigation.current!.setFocusIndex(1); // focus starts on start button
+        this.discCountNavigation.current!.setFocusIndex(1); // disc count starts on plus button
     }
 
     onIncreaseDiscCount = () => {

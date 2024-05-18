@@ -115,6 +115,11 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
         }
     }
 
+    checkForFullDiscsOnRod(type: RodTypes) {
+        const rod = this.rodRefs[type];
+        return rod.current!.getDiscRefs().length === this.discRefs.length;
+    }
+
     startGame(discCount: number) {
         const sourceRod = this.rodRefs.source;
         this.useDiscs(discCount);
@@ -139,11 +144,6 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
         this.stopAutoSolving();
         this.disableMouseOnRods();
         this.enableMouseOnDiscs();
-    }
-
-    updateMovesCounter(movesCounter: number) {
-        this.movesCounter = movesCounter;
-        this.movesCounterText.current!.textContent = `${TRANSLATIONS.moves}: ${movesCounter}`;
     }
 
     startMove(discValue: number, currentRod: RodTypes) {
@@ -223,13 +223,6 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
             }
         }, WIN_GAME_DIALOG_TIMEOUT_MS);
     }
-
-    checkForFullDiscsOnRod(type: RodTypes) {
-        const rod = this.rodRefs[type];
-        const rodDiscs = rod.current!.discRefs;
-        return rodDiscs.length === this.discRefs.length;
-    }
-
     
     autoSolve() {
         if (this.checkForFullDiscsOnRod('source')) {
@@ -256,6 +249,7 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
     }
 
     startAutoSolving() {
+        let index = 0;
         this.isAutoSolving = true;
         this.autoSolvingUsed = true;
         this.autoSolveFirstTry = false;
@@ -263,7 +257,7 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
         this.disableMouseOnDiscs();
         this.gameContainerNavigation.current!.updateFocusableChildren([]);
         this.solveButton.current!.classList.add('resolving');
-        let index = 0;
+        this.clock.current!.startClock();
         const solverSteps: HanoiSolverStep[] = [];
         hanoiSolver(
             this.discRefs.length, 'source', 'temporary', 'destination', solverSteps,
@@ -332,6 +326,11 @@ export class Game extends React.PureComponent<Props> implements IFocusable {
 
     focus() {
         this.gameContainerNavigation.current!.focus();
+    }
+
+    updateMovesCounter(movesCounter: number) {
+        this.movesCounter = movesCounter;
+        this.movesCounterText.current!.textContent = `${TRANSLATIONS.moves}: ${movesCounter}`;
     }
 
     renderRods() {

@@ -16,6 +16,15 @@ export class Rod extends React.PureComponent<Props> implements IFocusable {
         onPress(type);
     }
 
+    getTopDisc(): React.RefObject<Disc> | undefined {
+        if (!this.discRefs.length) return undefined;
+        return this.discRefs[this.discRefs.length - 1];
+    }
+
+    getDiscRefs() {
+        return this.discRefs;
+    }
+
     pushDisc(disc: React.RefObject<Disc>): boolean {
         const discsLength = this.discRefs.length;
         if (
@@ -23,7 +32,7 @@ export class Rod extends React.PureComponent<Props> implements IFocusable {
             this.discRefs[discsLength - 1].current!.getValue() > disc.current!.getValue()
         ) {
             this.discRefs.push(disc);
-            this.updateDiscOnRod(disc, discsLength - 1);
+            this.updateDisc(disc, discsLength - 1);
             return true;
         }
         return false;
@@ -37,12 +46,7 @@ export class Rod extends React.PureComponent<Props> implements IFocusable {
         this.discRefs = [];
     }
 
-    getTopDisc(): React.RefObject<Disc> | undefined {
-        if (!this.discRefs.length) return undefined;
-        return this.discRefs[this.discRefs.length - 1];
-    }
-
-    updateDiscOnRod(disc: React.RefObject<Disc>, positionIndex: number) {
+    updateDisc(disc: React.RefObject<Disc>, positionIndex: number) {
         const { type } = this.props;
         const { centerPx, bottomPx } = ROD_DIMENSIONS[type];
         const discBottomPx = bottomPx + DISC_ROD_BOTTOM + positionIndex * (DICS_HEIGHT + DISC_GAP);

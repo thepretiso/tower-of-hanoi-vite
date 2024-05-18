@@ -5,7 +5,6 @@ import './Message.css';
 import { TRANSLATIONS } from '../../translations';
 
 export class Message extends React.PureComponent {
-
     domRef = createRef<HTMLDivElement>();
 
     confirmButton = createRef<HTMLDivElement>();
