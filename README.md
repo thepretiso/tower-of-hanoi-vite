@@ -10,10 +10,10 @@ npm run dev
 ```
 
 ## Description
-This is app for job interview. It is written in React but not like you are used to.
-It is totally anti-pattern and the only React thing is the JSX and PureComponent. But it works!
+It is written in React but not like you are used to. It is totally anti-pattern
+and the only React thing is the JSX and PureComponent. But it works!
 
-And we have additional features aswell:
+Additional features aswell:
 - mouse support
 - custom disc number (3 - 10)
 - auto solving mechanism
